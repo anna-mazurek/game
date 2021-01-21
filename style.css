@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
+
+.main {
+  margin: 0 auto;
+  margin-top: 6%;
+  width: 70%;
+  height: 750px;
+  font-family: "Josefin Slab", serif;
+  font-size: 15px;
+  background-color: rgb(181, 216, 236);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 23px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.emoji {
+  width: 20px;
+  height: auto;
+}
+
+.anna-hand {
+  height: 100px;
+  width: auto;
+  padding-top: 10px;
+}
+
+/* .instructions {
+  margin-top: 2%;
+  padding: 1%;
+  height: 20%;
+  width: auto;
+  background-color:rgba(93, 104, 116, 0.88);
+} */
+
+.sign {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Sacramento;
+  font-size: 80px;
+  text-align: center;
+  line-height: 1;
+  color: #c6e2ff;
+  animation: neon 0.08s ease-in-out infinite alternate;
+}
+
+/*-- neon animation --*/
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92),
+      0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52),
+      0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78),
+      0 0 54px rgba(30, 132, 242, 0.92);
+  }
+  to {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.98),
+      0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(9, 69, 134, 0.58),
+      0 0 22px rgba(11, 91, 177, 0.84), 0 0 38px rgba(30, 132, 242, 0.88),
+      0 0 60px rgba(30, 132, 242, 1);
+  }
+}
+
+.box .content {
+  height: 100%;
+}
+
+.box {
+  height: 29%;
+  width: auto;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 4%;
+  position: relative;
+  overflow: hidden;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  width: 260%;
+  height: 620%;
+  background: repeating-linear-gradient(
+    white 0%,
+    white 7.5px,
+    steelblue 7.5px,
+    steelblue 15px,
+    white 15px,
+    white 22.5px,
+    steelblue 22.5px,
+    steelblue 30px
+  );
+  transform: translateX(-20%) translateY(-20%) rotate(-45deg);
+  animation: animate 20s linear infinite;
+}
+
+.box .content {
+  position: relative;
+  background-color: white;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 20px;
+  font-family: "Josefin Slab", serif;
+  z-index: 2;
+}
+
+.box,
+.box .content {
+  box-shadow: 0 0 2px rgb(17, 95, 196), 0 0 5px rgba(0, 0, 0, 1),
+    inset 0 0 5px rgba(0, 0, 0, 1);
+  border-radius: 10px;
+}
+
+@keyframes animate {
+  from {
+    background-position: 0;
+  }
+
+  to {
+    background-position: 0 450px;
+  }
+}
